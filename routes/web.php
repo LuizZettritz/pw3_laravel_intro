@@ -2,6 +2,8 @@
 
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\LivroController;
 
 Route::get('/', function () {
     return view('home');
