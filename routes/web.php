@@ -14,8 +14,8 @@ Route::view('/admin', 'admin.dashboard');
 
 Route::get('/teste-orm', function(){
     User::create([
-        'name' => 'Ana Clara Santos',
-        'email' => 'ana.santos@escola.sp.gov.br',
+        'name' => 'Luiz Augusto Domingues Zettritz',
+        'email' => 'luiz.zettritz@escola.sp.gov.br',
         'password' => '12345678',
     ]);
 
