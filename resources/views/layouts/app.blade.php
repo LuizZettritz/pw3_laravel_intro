@@ -19,11 +19,11 @@
         </nav>
     </div>
     </header>
-
-    <main>
+    
+    <main class="container mx-auto my-8 px-4">
         @yield('content')
     </main>
-    
+
 <footer class="mt-8 rounded-xl bg-slate-900 px-6 py-5 text-sm text-slate-300">
     <p>© {{ date('Y') }} NovaWave. Todos os direitos reservados.</p>
 </footer>
