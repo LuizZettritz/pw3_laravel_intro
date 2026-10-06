@@ -10,8 +10,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::delete('/usuarios/{id}', [UserController::class, 'destroy']);
+
 Route::view('/landing', 'landing');
-Route::view('/admin', 'admin.dashboard');
+Route::get('/admin', [UserController::class, 'index']);
 
 Route::get('/usuarios/novo', [UserController::class, 'create']);
 
@@ -25,4 +27,16 @@ Route::get('/teste-orm', function(){
     ]);
 
     return User::all();
+
+Route::get('/admin', [UserController::class, 'index']);
+
+// Rotas de criação
+Route::get('/usuarios/novo', [UserController::class, 'create']);
+Route::post('/usuarios', [UserController::class, 'store']);
+
+// Rotas de edição e atualização
+Route::get('/usuarios/{id}/editar', [UserController::class, 'edit']);
+Route::put('/usuarios/{id}', [UserController::class, 'update']);
+
+
 });
